@@ -831,21 +831,21 @@
 
     <!-- Stylesheet -->
     @vite('resources/css/app.css')
-
-    <script src="js/script.js"></script>
 </head>
 
 <body class="antialiased">
-    <nav class="md:container md:mx-auto flex-no-wrap relative flex w-full items-center justify-between bg-center bg-gradient-to-r from-violet-600 to-fuchsia-400 px-32 py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4"
+    <nav class="md:container md:mx-auto flex-no-wrap relative flex w-full items-center justify-between px-32 py-2 dark:bg-slate-800 lg:flex-wrap lg:justify-start lg:py-4"
         data-te-navbar-ref>
         <div class="flex w-full flex-wrap items-center justify-between px-2">
             <a class="mx-2 my-1 flex items-center select-none pointer-events-none lg:mb-0 lg:mt-0">
-                <img class="mr-2" src="assets/images/logo.svg" style="height: 30px" alt="Logo" loading="lazy" />
+                <img class="mr-2 dark:filter dark:invert" src="assets/logo-color.svg" style="height: 30px"
+                    alt="Logo" loading="lazy" />
             </a>
             <!-- Left navigation links -->
-            <ul class="list-style-none mr-auto flex flex-col pl-4 lg:flex-row" data-te-navbar-nav-ref>
+            <ul class="list-style-none flex flex-col items-center justify-center lg:flex-row"
+                data-te-navbar-nav-ref>
                 <!-- Home link -->
-                <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                <li class="mb-4 lg:mb-0 lg:pr-12" data-te-nav-item-ref>
                     <div class="relative flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" class="w-5 h-5"
                             stroke="currentColor" stroke-width="1.5">
@@ -853,90 +853,94 @@
                                 d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z"
                                 clip-rule="evenodd" />
                         </svg>
-                        <a class="text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+                        <a class="text-black font-bold transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
                             href="#" data-te-nav-link-ref>
                             Home</a>
                     </div>
                 </li>
                 <!-- Blog link -->
-                <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                <li class="mb-4 lg:mb-0 lg:pr-12" data-te-nav-item-ref>
                     <div class="relative flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
                         </svg>
-                        <a class="text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                        <a class="text-black font-bold transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                             href="#" data-te-nav-link-ref>Blog</a>
                     </div>
                 </li>
                 <!-- Tutorial link -->
-                <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                <li class="mb-4 lg:mb-0 lg:pr-12" data-te-nav-item-ref>
                     <div class="relative flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                         </svg>
-                        <a class="text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                        <a class="text-black font-bold transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                             href="#" data-te-nav-link-ref>Tutorial</a>
                     </div>
                 </li>
                 <!-- Projects link -->
-                <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                <li class="mb-4 lg:mb-0 lg:pr-12" data-te-nav-item-ref>
                     <div class="relative flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
                         </svg>
-                        <a class="text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                        <a class="text-black font-bold transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                             href="#" data-te-nav-link-ref>Projects</a>
                     </div>
                 </li>
             </ul>
-            <div class="hs-dropdown" data-hs-dropdown-placement="bottom-right" data-hs-dropdown-offset="30">
-                <a class="hs-dropdown-toggle hs-dark-mode group flex items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-gray-500" href="javascript:;">
-                  <svg class="hs-dark-mode-active:hidden block w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
-                  </svg>
-                  <svg class="hs-dark-mode-active:block hidden w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-                  </svg>
-                </a>
-
-                <div id="selectThemeDropdown" class="hs-dropdown-menu hs-dropdown-open:opacity-100 mt-2 hidden z-10 transition-[margin,opacity] opacity-0 duration-300 mb-2 origin-bottom-left bg-white shadow-md rounded-lg p-2 space-y-1 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700">
-                  <a class="hs-auto-mode-active:bg-gray-100 flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:;" data-hs-theme-click-value="auto">
-                    Auto (system default)
-                  </a>
-                  <a class="hs-default-mode-active:bg-gray-100 flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:;" data-hs-theme-click-value="default">
-                    Default (light mode)
-                  </a>
-                  <a class="hs-dark-mode-active:bg-gray-700 flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:;" data-hs-theme-click-value="dark">
-                    Dark
-                  </a>
-                </div>
-              </div>
+            <!-- Dark Mode Toggle -->
+            <a class="hs-dark-mode-active:hidden block hs-dark-mode group items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-gray-500"
+                href="#!" data-hs-theme-click-value="dark">
+                <svg class="w-6 h-5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
+                    stroke-width="1" stroke="black" viewBox="0 0 20 18">
+                    <path
+                        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
+                </svg>
+            </a>
+            <a class="hs-dark-mode-active:block hidden hs-dark-mode group items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-gray-500"
+                href="#!" data-hs-theme-click-value="light">
+                <svg class="w-6 h-5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="yellow"
+                    stroke-width="1" stroke="yellow" viewBox="0 0 20 18">
+                    <path
+                        d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                </svg>
+            </a>
         </div>
     </nav>
+    <!-- Introduce Section -->
     <header
-        class="relative sm:flex sm:justify-center sm:items-center bg-white dark:bg-dots-lighter dark:bg-gray-900 selection:bg-violet-500 selection:text-white">
-        <div class="container mx-auto lg:max-w-7xl px-4 pt-64 pb-32 md:text-left">
-            <div class="w-100 md:w-1/2 bg-white">
-                <p class="font-bold text-violet-800">Assalamu'alaikum 👋, saya</p>
-                <h1 class="font-bold text-black text-4xl pb-2">Abimanyu Okysaputra Rachman</h1>
-                <p class="text-l font-light max-w-1/2 text-gray-500">Seorang mahasiswa <b class="font-bold text-violet-800">Universitas Pakuan</b> yang ingin menjadi web developer.😁</p>
+        class="relative sm:flex sm:justify-center sm:items-center dark:bg-dots-lighter dark:bg-gray-900 selection:bg-violet-500 selection:text-white">
+        <div class="container mx-auto lg:max-w-7xl px-4 pt-64 pb-64 md:text-left">
+            <div class="w-100 md:w-1/2">
+                <p class="font-bold text-violet-800 dark:text-violet-300">Assalamu'alaikum 👋, saya</p>
+                <h1 class="font-bold text-black dark:text-white text-4xl pb-2">Abimanyu Okysaputra Rachman</h1>
+                <p class="text-l font-light max-w-1/2 text-gray-500 dark:text-gray-300">Seorang mahasiswa <b
+                        class="font-bold text-violet-800 dark:text-violet-300">Universitas Pakuan</b> yang ingin menjadi web developer.😁
+                </p>
 
                 {{-- Contact me --}}
-                <button class="rounded-full bg-violet-500 mt-5 px-4 py-2 text-white font-bold"><a href="">Hubungi Saya</a></button>
+                <button class="rounded-full bg-violet-500 mt-5 px-4 py-2 text-white font-bold"><a
+                        href="">Hubungi Saya</a></button>
             </div>
         </div>
     </header>
-    <section class="relative sm:flex sm:justify-center sm:items-center bg-white dark:bg-dots-lighter dark:bg-gray-900 selection:bg-violet-500 selection:text-white">
+    <!-- About me Section -->
+    <section
+        class="relative sm:flex sm:justify-center sm:items-center bg-violet-200 selection:bg-violet-500 selection:text-white">
         <div class="container mx-auto lg:max-w-7xl px-4 py-4 md:text-left">
             <h1 class="font-bold text-violet-800">Tentang saya</h1>
         </div>
     </section>
+
+    <script src="{{ asset('js/script.js') }}"></script>
+    <script src="./node_modules/preline/dist/preline.js"></script>
 </body>
 
 </html>
